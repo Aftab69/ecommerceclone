@@ -8,7 +8,7 @@ const SingleProduct = ({ prod }) => {
       <img src={prod.image} alt={prod.name} />
       <div className="productDesc">
         <span style={{ fontWeight: 700 }}>{prod.name}</span>
-        <span>₹ {prod.price.substring(0, 3)}</span>
+        <span>₹ {prod.price}</span>
       </div>
       {cart.includes(prod) ? (
         <button

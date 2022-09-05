@@ -7,30 +7,31 @@ const Cart = createContext();
 
 const Context = ({ children }) => {
   const [cart, setCart] = useState([]);
+  const [total, setTotal] = useState();
 
   const productsArray = [{
     id: "sudjkgbfsudfbcn87",
     name: "CAMERA",
-    price: "25000.00",
+    price: "25000",
     image: image1,
   },
   {
     id: "sd9fuujsdf98dvdvi",
     name: "DRONE",
-    price: "150000.00",
+    price: "150000",
     image: image2,
   },
   {
     id: "sifsd9cvd98f9vd7hvd3",
     name: "TELEVISION",
-    price: "15000.00",
+    price: "15000",
     image: image3,
   }];
 
   const [products] = useState(productsArray);
 
   return (
-    <Cart.Provider value={{ cart, setCart, products }}>
+    <Cart.Provider value={{ cart, setCart, products, total, setTotal }}>
       {children}
     </Cart.Provider>
   );
